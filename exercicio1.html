@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Estação do lanche</title>
+  <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    [class^="amarelo"], [class*="amarelo"]{
+        background-color: #FFD704;
+    }
+    [class^="ve"], [class*="ve"]{
+        background-color: #a00404;
+        color: #a00404;
+        min-height: 250px;
+    }
+    [class^="vermelho"], [class*="vermelho"]{
+        background-color: #FF0000;
+    }
+    [class^="beje2"], [class*="beje2"]{
+        background-color: #f0e3a5;
+    }
+    [class^="beje3"], [class*="beje3"]{
+        background-color: #f0e3a5;
+        color: #f0e3a5;
+        height: 50px;
+    }
+    [class^="cinza"], [class*="cinza"]{
+        background-color: #F4F4F8;
+        min-height: 140px;
+    }
+    [class^="branco"], [class*="branco"]{
+        background-color: #ffff;
+        color: #ffff;
+        height: 50px;
+    }
+    [class^="verde"], [class*="verde"]{
+        background-color: #00FF1A;
+        color: #00FF1A;
+        height: 250px;
+    }
+    .banner{
+        background-image: url(img/extremopicante.jpeg);
+        height: 500px;
+        background-size: cover;
+        color: #ffff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner-p{
+        background-image: url(img/Frame\ 4\ \(1\).png);
+        height: 138px;
+        width: 350px;
+        background-size: cover;
+        color: #ffff;
+        border-radius: 10px;
+    }
+    .banner-c{
+        background-image: url(img/Frame\ 5\ \(1\).png);
+        height: 138px;
+        width: 350px;
+        background-size: cover;
+        color: #ffff;
+        border-radius: 10px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    .burguer{
+        background-image: url(img/smachBurger.jpeg);
+        height: 210px;
+        width: 296px;
+        background-size: cover;
+        border-radius: 10px;
+        margin-left: 20px;
+    }
+    
+    .burguer2{
+        background-image: url(img/extremopicante.jpeg);
+        height: 210px;
+        width: 296px;
+        background-position-x: -60px;
+        background-size: cover;
+        border-radius: 10px;
+        align-items: center;
+        margin-left: 15px;
+    }
+    
+    .burguer3{
+        background-image: url(img/combopicles.jpeg);
+        height: 210px;
+        width: 296px;
+        background-size: cover;
+        border-radius: 10px;
+        align-items: center;
+        margin-left: 15px;
+    }
+    
+    h3, h4{
+        color: #DE0A0A;
+    }
+    
+    
+    .formulario{
+        width: 500px;
+    }
+    
+    .img{
+        background-image: url(img/imagem1.jpeg);
+        height: 195px;
+        background-size: cover;
+        align-items: center;
+    
+    }
+    
+    .img2{
+        background-image: url(img/imagem2.jpeg);
+        height: 195px;
+        background-size: cover;
+        align-items: center;
+    }
+    
+    .img3{
+        background-image: url(img/imagem3.jpeg);
+        height: 153px;
+        background-size: cover;
+        align-items: center;
+    }
+    
+    .img4{
+        background-image: url(img/imagem4.jpeg);
+        height: 153px;
+        background-size: cover;
+        align-items: center;
+    }
+    
+    .img5{
+        background-image: url(img/imagem5.jpeg);
+        height: 153px;
+        background-size: cover;
+        align-items: center;
+    }
+    
+    
+    h5{
+        color: #FFD704;
+        font-size: 80px;
+    }
+    h6{
+        font-size: 77px;
+        color: #FFD704;
+    }
+    
+    .img,
+    .img2,
+    .img3, 
+    .img4,
+    .img5 {
+        border: 3px solid #DE0A0A;
+        transition: all 0.3s;
+    }
+    
+    :is(.img, .img2, .img3, .img4, .img5):hover {
+        transform: scale(1.5);
+    }
+    
+    .info{
+        color: #FFFF;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .redes p{
+        text-align: center;
+    }
+    
+    .contato{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .logo{
+        font-size: 25px;
+        display: flex;
+        align-items: center
+    }
+    
+    .ham{
+        background-image: url(img/Segue\ a\ gente.png);
+        background-repeat: no-repeat;
+        background-color: #de0a0a;
+    }
+    
+    iframe{
+        width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-warning">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <p><img src="img/burger-solid.svg" alt="" style="width: 50px;"> Estação do lanche</p>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#produtos">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#contatos">Contatos</a>
+            </li>
+            <li class="nav-item">
+              <a href="
+              https://wa.me/5511996220472"><button class="btn btn-success" style="border-radius: 50px;"><i
+                    class="fa-brands fa-whatsapp" style="color: #ffffff; margin-right: 8px;"></i>Fale
+                  Conosco</button></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <div class="row banner">
+      <div class="col-md-12">
+        <div>
+          <h1>Uma delícia de sabor</h1>
+          <p>Para os clientes mais exigentes</p>
+          <a href="#produtos">
+            <button type="button" class="btn btn-danger" style="border-radius: 50px;">
+              VER MAIS
+              <strong>PRODUTOS</strong>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row amarelo pt-5 pb-5 card">
+      <div class="col-md-6 banner-p" id="bannerH"></div>
+      <div class="col-md-6 banner-c" id="bannerC"></div>
+    </div>
+
+    <div class="row py-5" id="produtos-1">
+      <div class="col-md-4 burguer" id="produtos" ></div>
+      <div class="col-md-6 ">
+        <h3>Smash burguer fenomenal </h3>
+        <p>Pão de gergilin, hamburguer 180g e muito queijo cheddar.</p>
+        <p><strong>R$ 18,90</strong></p>
+      </div>
+      <div class="col-md-2 d-flex align-items-center">
+        <a href="https://wa.me/5511996220472"><button type="button" class="btn btn-danger"
+            style="border-radius: 50px; color: #FFD704; text-decoration: none;"><strong>EU
+              QUERO!</strong></button></a>
+      </div>
+    </div>
+
+    <div class="row  py-5 beje2" id="produtos-2">
+      <div class="col-md-3 burguer2" id="produtos"></div>
+      <div class="col-md-6 ">
+        <h3>Extremo picante burguer</h3>
+        <p>Pão de gergilin, hamburguer 180g e muito queijo cheddar, salada e molho especial de pimenta.</p>
+        <p><strong>R$ 24,90</strong></p>
+      </div>
+      <div class="col-md-3 d-flex align-items-center">
+        <a href="https://wa.me/5511996220472"><button type="button" class="btn btn-danger"
+            style="border-radius: 50px; color: #FFD704; text-decoration: none;"><strong>EU
+              QUERO!</strong></button></a>
+      </div>
+    </div>
+
+    <div class="row py-5 cinza" id="combo">
+      <div class="col-md-3 burguer3"></div>
+      <div class="col-md-6">
+        <h3>Combo Picles</h3>
+        <p>Pão de gergilin, hamburguer 180g e salada com picles. Acompanha Batata de 250g e Refrigerante de 350ml</p>
+        <p><strong>R$ 39,90</strong></p>
+      </div>
+      <div class="col-md-3 d-flex align-items-center">
+        <a href="https://wa.me/5511996220472"><button type="button" class="btn btn-danger"
+            style="border-radius: 50px; color: #FFD704;text-decoration: none;"><strong>EU
+              QUERO!</strong></button>
+        </a>
+      </div>
+    </div>
+
+    <div class="row py-4 px-3">
+      <div class="col-md-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14869.512057305497!2d-50.33787230340106!3d-21.296074573465773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssesi%20birigui!5e0!3m2!1spt-BR!2sbr!4v1695384244665!5m2!1spt-BR!2sbr"
+          width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-md-6 formulario px-5">
+        <h4>FALE CONOSCO</h4>
+        <form action="">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Informe seu nome</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Jose Antônio">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Telefone para contato</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: (18) 99696-7878">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Sua mensagem</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Informe aqui sua mensagem"
+              rows="3"></textarea>
+          </div>
+        </form>
+        <button type="button" class="btn btn-danger"
+          style="border-radius: 50px; color: #FFD704;"><strong>ENVIAR</strong></button>
+      </div>
+    </div>
+
+    <div class="row ham p-5">
+      <div class="col-md-4 info">
+        <h5><strong>SEGUE A</strong></h5>
+        <h6><strong>G E N T E</strong></h6>
+        <div>
+          <div class="redes">
+            <p>
+              <i class="fa-brands fa-instagram" style="color: #ffffff; width: 10px;"></i> 
+               estacaolanche
+            </p>
+          </div>
+          <div class="redes">
+            <p>
+              <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+               estacaolanchetv
+            </p>
+          </div>
+          <div class="redes">
+            <p>
+              <i class="fa-brands fa-tiktok" style="color: #ffffff; width: 10px;"></i>
+               estacaolanche
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col-md-6 img">
+          </div>
+          <div class="col-md-6 img2">
+          </div>
+          <div class="col-md-4 img3">
+          </div>
+          <div class="col-md-4 img4">
+          </div>
+          <div class="col-md-4 img5">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row amarelo p-1" id="contatos">
+      <div class="col-md-6 logo">
+        <p>
+          <i class="fa-solid fa-burger"></i>
+          <strong>Estação do Lanche</strong>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p class="contato">(18) 99123-1234 / (18) 3636-3636</p>
+        <p class="contato">Rua Lorem Ipsum Nº 123, Centro - Birigui / SP</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://kit.fontawesome.com/8eabb72de4.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
+</html>
